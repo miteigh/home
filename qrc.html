@@ -3,13 +3,19 @@
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
-
+  <div>
+    <input type="text" id="in">
+  </div>
 <!-- Create a container element for the QR code -->
 <div id="qrcode"></div>
 
 <script>
   // Generate the QR code
-  new QRCode(document.getElementById("qrcode"), "https://www.instagram.com/");
+  const Input = document.getElementById('in').value;
+  var qrcode = new QRCode("qrcode");
+  var url = Input;
+  qrcode.makeCode(url);
+  
 </script>
 </body>
 </html>
