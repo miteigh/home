@@ -5,17 +5,20 @@
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
   <div>
     <input type="text" id="in">
+    <button type="submit">Generate QR Code</button>
   </div>
 <!-- Create a container element for the QR code -->
 <div id="qrcode"></div>
 
 <script>
   // Generate the QR code
-  const Input = document.getElementById('in').value;
-  var qrcode = new QRCode("qrcode");
-  var url = Input;
-  qrcode.makeCode(url);
-  
+  const form = document.querySelector('form');
+    const Input = document.getElementById('in');
+
+    form.addEventListener('submit', (event) => {event.preventDefault();
+
+      // Get the WiFi network details from the form
+      const Input = ssidInput.value;
 </script>
 </body>
 </html>
