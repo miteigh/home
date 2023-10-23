@@ -1,3 +1,4 @@
+
 const form = document.querySelector('form');
     const ssidInput = document.getElementById('ssid');
     const passwordInput = document.getElementById('password');
@@ -27,3 +28,16 @@ const form = document.querySelector('form');
         }
       });
     });
+
+ // Get the element by its ID
+        const element = document.getElementById("myElement");
+
+        // Get the button by its ID
+        const button = document.getElementById("modifyClass");
+
+        // Add a click event listener to the button
+        button.addEventListener("click", () => {
+            // Remove the "oldClass" and add the "newClass"
+            element.classList.remove("oldClass");
+            element.classList.add("newClass");
+        });
